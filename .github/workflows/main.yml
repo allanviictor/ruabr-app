@@ -1,6 +1,6 @@
 name: Deploy on VPS
 run-name: ${{ github.actor }} is deploying ruabr on VPS 🚀
-on: 
+on:
   push:
     branches:
       - master
@@ -22,18 +22,15 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build
+      - name: Build React application
         run: npm run build
-
 
       - name: Upload via SFTP
         uses: easingthemes/ssh-deploy@v5.0.3
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rz --delete"
-          SOURCE: "dist/"           # ou "build/"
-          REMOTE_HOST: ${{ secrets.FPT_SERVER }}
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.HOSTINGER_HOST }}
           REMOTE_PORT: ${{ secrets.FTP_PORT || 22 }}
           REMOTE_USER: ${{ secrets.FTP_USER }}
-       
-          
