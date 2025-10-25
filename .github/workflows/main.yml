@@ -28,7 +28,7 @@ jobs:
       - name: Upload via SFTP
         uses: easingthemes/ssh-deploy@v5.0.3
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.RUA_SSH_PRIVATE_KEY }}
           ARGS: "-rz --delete"
           SOURCE: "dist/"
           REMOTE_HOST: ${{ secrets.RUA_REMOTE_HOST }}
