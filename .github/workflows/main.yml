@@ -1,0 +1,39 @@
+name: Deploy on VPS
+run-name: ${{ github.actor }} is deploying ruabr on VPS 🚀
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code
+        uses: actions/checkout@v4
+
+      - name: Use node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ secrets.NODE_VERSION || '20' }}
+          cache: "npm"
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+
+      - name: Upload via SFTP
+        uses: easingthemes/ssh-deploy@v5.0.3
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rz --delete"
+          SOURCE: "dist/"           # ou "build/"
+          REMOTE_HOST: ${{ secrets.FPT_SERVER }}
+          REMOTE_PORT: ${{ secrets.FTP_PORT || 22 }}
+          REMOTE_USER: ${{ secrets.FTP_USER }}
+       
+          
