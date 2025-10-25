@@ -16,7 +16,7 @@ jobs:
       - name: Use node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ secrets.NODE_VERSION || '20' }}
+          node-version: ${{ secrets.RUA_NODE_VERSION || '20' }}
           cache: "npm"
 
       - name: Install deps
@@ -31,6 +31,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rz --delete"
           SOURCE: "dist/"
-          REMOTE_HOST: ${{ secrets.HOSTINGER_HOST }}
-          REMOTE_PORT: ${{ secrets.FTP_PORT || 22 }}
-          REMOTE_USER: ${{ secrets.FTP_USER }}
+          REMOTE_HOST: ${{ secrets.RUA_REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.RUA_REMOTE_USER }}
+          REMOTE_PORT: ${{ secrets.RUA_REMOTE_PORT || 22 }}
+          TARGET: ${{ secrets.RUA_REMOTE_TARGET }}
