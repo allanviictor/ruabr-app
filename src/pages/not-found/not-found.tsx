@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 export function NotFound() {
+  useEffect(() => {
+    document.title = "Página não encontrada";
+  });
   return (
     <div className="   px-4">
       <div className="text-center">

@@ -10,22 +10,45 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Get latest code
+      # Checkout the latest code from the repository
+      - name: Checkout Code 📥
         uses: actions/checkout@v4
 
-      - name: Use node
+      # Setup Node.js environment with caching enabled for npm
+      - name: Setup Node.js Environment ⚙️
         uses: actions/setup-node@v4
         with:
           node-version: ${{ secrets.RUA_NODE_VERSION || '20' }}
           cache: "npm"
 
-      - name: Install deps
+      # Cache node_modules folder based on package-lock.json hash to speed up installs
+      - name: Cache Node Modules 📦
+        uses: actions/cache@v3
+        id: cache-npm
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # Install dependencies only if cache was not hit (i.e., package-lock.json changed)
+      - name: Install Dependencies ⬇️
+        if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm ci
 
-      - name: Build React application
+      # Cache the build output folder 'dist' based on source files and config hashes
+      - name: Cache Build Artifacts 🏗️
+        uses: actions/cache@v3
+        with:
+          path: dist
+          key: ${{ runner.os }}-build-${{ hashFiles('src/**/*', 'public/**/*', 'package.json', 'vite.config.js') }}
+
+      # Build the React application using Vite
+      - name: Build React Application 🔨
         run: npm run build
 
-      - name: Upload via SFTP
+      # Deploy the built files to the VPS via SFTP using SSH key authentication
+      - name: Deploy to VPS via SFTP 🚀
         uses: easingthemes/ssh-deploy@v5.0.3
         with:
           SSH_PRIVATE_KEY: ${{ secrets.RUA_SSH_PRIVATE_KEY }}
