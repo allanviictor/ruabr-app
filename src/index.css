@@ -1,16 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+/* ============================================
+   TEMA RUA - Rede Urbana de Aprendizagem
+   Paleta: Sertão Contemporâneo
+   ============================================ */
+
+@theme {
+  /* ========== CORES PRIMARIAS ========== */
+  /* Barro Queimado - Destaques, divisores */
+  --color-primary-50: #f2e8e3;
+  --color-primary-100: #dcc4b8;
+  --color-primary-200: #c6a08d;
+  --color-primary-300: #b07c62;
+  --color-primary-400: #9a5837;
+  --color-primary-500: #8a4b2e;
+  --color-primary-600: #733f26;
+  --color-primary-700: #5c331e;
+  --color-primary-800: #452716;
+  --color-primary-900: #2e1b0e;
+
+  /* ========== CORES SECUNDÁRIAS ========== */
+  /* Verde Mandacaru - Links, badges */
+  --color-secondary-50: #e8f2ed;
+  --color-secondary-100: #c2ddd0;
+  --color-secondary-200: #9cc8b3;
+  --color-secondary-300: #76b396;
+  --color-secondary-400: #509e79;
+  --color-secondary-500: #3f6b4a;
+  --color-secondary-600: #355a3e;
+  --color-secondary-700: #2b4932;
+  --color-secondary-800: #213826;
+  --color-secondary-900: #17271a;
+
+  /* ========== CORES TERCIARIAS ========== */
+  /* Amarelo Sol do Agreste - CTAs principais */
+  --color-tertiary-50: #fff9e6;
+  --color-tertiary-100: #fff0b3;
+  --color-tertiary-200: #f5e080;
+  --color-tertiary-300: #ebc94d;
+  --color-tertiary-400: #e8b949;
+  --color-tertiary-500: #cfa135;
+  --color-tertiary-600: #b68a2a;
+  --color-tertiary-700: #8a6820;
+  --color-tertiary-800: #5e4615;
+  --color-tertiary-900: #32240b;
+
+  /* ========== NEUTROS ========== */
+  /* Escala Terra/Areia/Off-white */
+  --color-neutral-50: #f5f3ee;
+  --color-neutral-100: #ebe7df;
+  --color-neutral-200: #d9c9a7;
+  --color-neutral-300: #c4b08e;
+  --color-neutral-400: #af9775;
+  --color-neutral-500: #8a7a5d;
+  --color-neutral-600: #6e614a;
+  --color-neutral-700: #524837;
+  --color-neutral-800: #362f24;
+  --color-neutral-900: #2b2a25;
+}
+
+/* ========== CLASSES UTILITÁRIAS CUSTOMIZADAS ========== */
+
+/* Aplicar fonte display nos títulos */
+.font-inter {
+  font-family: "Inter", system-ui, sans-serif;
+}
+.font-volkhov {
+  font-family: "Volkhov", Georgia, serif;
+}
+
+body,
+html {
+  font-family: "Inter", system-ui, sans-serif;
   font-weight: 400;
+  background-color: var( --color-neutral-900);
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-

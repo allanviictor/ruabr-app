@@ -14,7 +14,7 @@ export function Layout({ children, PageTitle }: LayoutProps) {
         <title>{PageTitle ? `Ruabr | ${PageTitle}` : "Ruabr"}</title>
       </head>
       <Header />
-      {children}
+      <div>{children}</div>
       <Footer />
     </React.Fragment>
   );
