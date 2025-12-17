@@ -52,3 +52,33 @@ npm run preview
 *   **Component Structure**: The project is structured with pages in the `src/pages` directory and reusable layout components in `src/layouts`. Shared components are expected to be in the `src/shared/components` directory.
 *   **Routing**: All application routes are defined in the `src/routes/routes.tsx` file.
 *   **HTTP Requests**: Use the pre-configured **Axios** instance from `src/configs/axios.ts` for making API calls.
+
+
+# Commit Message Format
+
+- Use a single line for the commit message.
+- Start with an emoji to indicate the type of change.
+- Use the following emojis for different types of changes:
+  - 📦 refactor: code changes that do not fix bugs or add features
+  - 📝 docs: documentation changes
+  - 🐛 fix: bug fixes
+  - ✨ feat: new features
+  - 🚀 perf: performance improvements
+  - 🔧 chore: maintenance tasks
+  - 🧪 test: adding or updating tests
+- Use the present tense for the commit message.
+- Keep the message concise and descriptive.
+
+# Sample Commit Message
+
+✨ feat(popover): add popover component
+📦 refactor(command): improve command component structure
+🐛 fix(command): resolve input focus issue in command input
+🔧 chore: update dependencies and improve build process
+🧪 test(command): add unit tests for command component
+
+## Important:
+
+- Use only the first line of the commit, no additional descriptions.
+- You don't need to split the files into several commits and make a commit for each file. You can group them together and make more general commits.
+- Always use the `docs/angular-llm.txt` file to use Angular's best practices.
