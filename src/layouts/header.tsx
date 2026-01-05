@@ -1,43 +1,28 @@
-import React from "react";
-import LogoRua from "../assets/logo-rua.png";
+import { Link } from "react-router-dom";
+import LogoRua from "/assets/logo-rua-completo.png";
+
+const navLinks = [
+  { href: "/#informe-se", label: "Informe-se" },
+  { href: "/#como-ajudar", label: "Como ajudar" },
+  { href: "/#noticias", label: "Notícias e histórias" },
+  { href: "/#sobre-nos", label: "Sobre nós" },
+];
 
 export function Header() {
   return (
-    <React.Fragment>
-      <nav className="bg-primary-900 shadow-md sticky top-0 z-50">
-        <div className="container mx-auto py-3">
-          <div className="flex justify-between items-center h-16">
-            <img className="w-auto h-10" src={LogoRua} alt="logo rua br" />
-
-            <div className="hidden md:flex items-center space-x-12">
-              <a
-                href="#"
-                className="text-text hover:text-neutral-100 transition-colors text-lg font-bold"
-              >
-                Informe-se
-              </a>
-              <a
-                href="#"
-                className="text-text hover:text-neutral-100 transition-colors text-lg font-bold"
-              >
-                Como ajudar
-              </a>
-              <a
-                href="#"
-                className="text-text hover:text-neutral-100 transition-colors  text-lg font-bold"
-              >
-                Notícias e histórias
-              </a>
-              <a
-                href="#"
-                className="text-text hover:text-neutral-100 transition-colors text-lg font-bold"
-              >
-                Sobre nós
-              </a>
-            </div>
+    <header className="bg-primary-900 shadow-lg sticky top-0 z-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex-shrink-0">
+            <Link to="/">
+              <img className="h-12 w-auto" src={LogoRua} alt="Logo RUA BR" />
+            </Link>
+          </div>
+          <div className="hidden md:block">
+            {navLinks.map((link) => link.label)}
           </div>
         </div>
-      </nav>
-    </React.Fragment>
+      </div>
+    </header>
   );
 }

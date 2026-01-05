@@ -5,7 +5,7 @@ import {
   YoutubeLogoIcon,
 } from "@phosphor-icons/react";
 import React from "react";
-import LogoRuaCompleto from "../assets/logo-rua-completo.png";
+import LogoRuaCompleto from "/assets/logo-rua-completo.png";
 
 export function Footer() {
   return (

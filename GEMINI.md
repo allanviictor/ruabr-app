@@ -81,4 +81,4 @@ npm run preview
 
 - Use only the first line of the commit, no additional descriptions.
 - You don't need to split the files into several commits and make a commit for each file. You can group them together and make more general commits.
-- Always use the `docs/angular-llm.txt` file to use Angular's best practices.
+- Always use the `docs/react-guide.md` file to use Angular's best practices.
