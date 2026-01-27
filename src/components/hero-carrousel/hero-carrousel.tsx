@@ -68,14 +68,14 @@ export function HeroCarousel({
     (index: number) => {
       api?.scrollTo(index);
     },
-    [api]
+    [api],
   );
 
   return (
     <div
       className={cn(
         "relative w-full h-[60vh] sm:h-[65vh] lg:h-[70vh] overflow-hidden",
-        className
+        className,
       )}
     >
       <Carousel
@@ -112,15 +112,25 @@ export function HeroCarousel({
                     </h1>
 
                     {/* Description */}
-                    <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150">
+                    <p className="text-base sm:text-lg lg:text-xl text-white  mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150">
                       {slide.description}
                     </p>
 
                     {/* CTA Button */}
                     <div className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-                      <Button size="lg" variant={"primary"}>
-                        <a href={slide.ctaLink}>{slide.ctaText}</a>
+                      <Button
+                        size="xl"
+                        variant="primary"
+                        className="hidden md:inline-block cursor-pointer"
+                      >
+                        <a href="">{slide.ctaText}</a>
                       </Button>
+
+                      <Button
+                        size="sm"
+                        variant="primary"
+                        className="inline-block md:hidden cursor-pointer"
+                      ></Button>
                     </div>
                   </div>
 
@@ -168,7 +178,7 @@ export function HeroCarousel({
               "transition-all duration-300 rounded-full cursor-pointer ",
               index === current
                 ? "w-8 h-2 bg-primary-500 "
-                : "w-2 h-2 bg-zinc-50 hover:bg-white/70"
+                : "w-2 h-2 bg-zinc-50 hover:bg-white/70",
             )}
             aria-label={`Ir para slide ${index + 1}`}
           />
