@@ -1,9 +1,5 @@
-import {
-  FacebookLogoIcon,
-  InstagramLogoIcon,
-  LinkedinLogoIcon,
-  YoutubeLogoIcon,
-} from "@phosphor-icons/react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
+
 import React from "react";
 import LogoRuaCompleto from "/assets/logo-rua-completo.png";
 
@@ -150,33 +146,27 @@ export function Footer() {
                 </p>
                 <div className="flex items-center gap-3 text-neutral-50">
                   {/*      <!-- Ícones sociais (SVGs simples; substitua pelos seus) --> */}
+
                   <a
                     href="#"
                     aria-label="Facebook"
                     className="hover:text-primary-400 transition-colors"
                   >
-                    <FacebookLogoIcon weight="light" size={28} />
+                    <Facebook strokeWidth={1} size={25} />
                   </a>
                   <a
                     href="#"
                     aria-label="Instagram"
                     className="hover:text-primary-400 transition-colors"
                   >
-                    <InstagramLogoIcon weight="light" size={28} />
+                    <Instagram strokeWidth={1} size={25} />
                   </a>
                   <a
                     href="#"
                     aria-label="YouTube"
                     className="hover:text-primary-400 transition-colors"
                   >
-                    <YoutubeLogoIcon weight="light" size={28} />
-                  </a>
-                  <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    className="hover:text-primary-400 transition-colors"
-                  >
-                    <LinkedinLogoIcon weight="light" size={28} />
+                    <Youtube strokeWidth={1} size={25} />
                   </a>
                 </div>
               </div>

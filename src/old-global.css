@@ -1,65 +1,67 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
+
 @import "tw-animate-css";
 
 @custom-variant dark (&:where(.dark, .dark *));
-/* ============================================
-   TEMA RUA - Rede Urbana de Aprendizagem
-   Paleta: Sertão Contemporâneo
-   ============================================ */
+/* 
+  ============================================
+  TEMA RUA - Rede Urbana de Aprendizagem
+  ============================================ 
+*/
 
 @theme {
   /* ========== CORES PRIMARIAS ========== */
-  /* Barro Queimado - Destaques, divisores */
- /*  --color-primary-50: #f2e8e3;
-  --color-primary-100: #dcc4b8;
-  --color-primary-200: #c6a08d;
-  --color-primary-300: #b07c62;
-  --color-primary-400: #9a5837;
-  --color-primary-500: #8a4b2e;
-  --color-primary-600: #733f26;
-  --color-primary-700: #5c331e;
-  --color-primary-800: #452716;
-  --color-primary-900: #2e1b0e; */
+  /* Cor primária  (Laranja) - Energia, Ação, Humanidade*/
+  --color-primary-50: #fef3c7;
+  --color-primary-100: #fee8a8;
+  --color-primary-200: #fdd78f;
+  --color-primary-300: #fcc76a;
+  --color-primary-400: #fbb84d;
+  --color-primary-500: #fb923c; /* principal */
+  --color-primary-600: #f97316;
+  --color-primary-700: #ea580c;
+  --color-primary-800: #c85a1e;
+  --color-primary-900: #b45309;
 
   /* ========== CORES SECUNDÁRIAS ========== */
-  /* Verde Mandacaru - Links, badges */
-/*   --color-secondary-50: #e8f2ed;
-  --color-secondary-100: #c2ddd0;
-  --color-secondary-200: #9cc8b3;
-  --color-secondary-300: #76b396;
-  --color-secondary-400: #509e79;
-  --color-secondary-500: #3f6b4a;
-  --color-secondary-600: #355a3e;
-  --color-secondary-700: #2b4932;
-  --color-secondary-800: #213826;
-  --color-secondary-900: #17271a; */
+  /* Cor secundária (Azul Profundo) - Confiança, Autoridade */
+  /* --color-secondary-50: #eff6ff;
+  --color-secondary-100: #dbeafe;
+  --color-secondary-200: #bfdbfe;
+  --color-secondary-300: #93c5fd;
+  --color-secondary-400: #60a5fa;
+  --color-secondary-500: #3b82f6;
+  --color-secondary-600: #2563eb;
+  --color-secondary-700: #1d4ed8; */
+ /*  --color-secondary-800: #1e40af; */ /* principal para textos e elementos */
+ /*  --color-secondary-900: #1e3a8a; */ /* principal para títulos e hero */
 
   /* ========== CORES TERCIARIAS ========== */
-  /* Amarelo Sol do Agreste - CTAs principais */
-/*   --color-tertiary-50: #fff9e6;
-  --color-tertiary-100: #fff0b3;
-  --color-tertiary-200: #f5e080;
-  --color-tertiary-300: #ebc94d;
-  --color-tertiary-400: #e8b949;
-  --color-tertiary-500: #cfa135;
-  --color-tertiary-600: #b68a2a;
-  --color-tertiary-700: #8a6820;
-  --color-tertiary-800: #5e4615;
-  --color-tertiary-900: #32240b; */
+  /* Cor terciária (Verde) - Crescimento, Esperança, CTAs */
+/*   --color-tertiary-50: #ecfdf5;
+  --color-tertiary-100: #d1fae5;
+  --color-tertiary-200: #a7f3d0;
+  --color-tertiary-300: #6ee7b7;
+  --color-tertiary-400: #34d399;
+  --color-tertiary-500: #10b981;
+  --color-tertiary-600: #059669;
+  --color-tertiary-700: #047857;
+  --color-tertiary-800: #065f46;
+  --color-tertiary-900: #064e3b; */
 
   /* ========== NEUTROS ========== */
-  /* Escala Terra/Areia/Off-white */
- /*  --color-neutral-50: #f5f3ee;
-  --color-neutral-100: #ebe7df;
-  --color-neutral-200: #d9c9a7;
-  --color-neutral-300: #c4b08e;
-  --color-neutral-400: #af9775;
-  --color-neutral-500: #8a7a5d;
-  --color-neutral-600: #6e614a;
-  --color-neutral-700: #524837;
-  --color-neutral-800: #362f24;
-  --color-neutral-900: #2b2a25; */
+  /* Textos e cores de suporte (Neutros) */
+/*   --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827; */
 }
 
 /* ========== CLASSES UTILITÁRIAS CUSTOMIZADAS ========== */
@@ -76,7 +78,7 @@ body,
 html {
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 400;
-  background-color: var(--color-neutral-900);
+  
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -84,7 +86,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@theme inline {
+/* 
+  ---break--- 
+*/
+
+ @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -123,82 +129,100 @@ html {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-}
+  --color-minha-custom: var(--minha-cor)
+} 
 
-:root {
+/* 
+  ---break--- 
+*/
+
+ :root {
+  --minha-cor: var(--color-red-200);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: #18181b;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: oklch(0.552 0.016 285.938);
+  --accent: oklch(0.967 0.001 286.375);
+  --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.92 0.004 286.32);
+  --input: oklch(0.92 0.004 286.32);
+  --ring: oklch(0.705 0.015 286.067);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.141 0.005 285.823);
+  --sidebar-primary: oklch(0.21 0.006 285.885);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
+  --sidebar-accent: oklch(0.967 0.001 286.375);
+  --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
+  --sidebar-border: oklch(0.92 0.004 286.32);
+  --sidebar-ring: oklch(0.705 0.015 286.067);
+} 
 
-.dark {
-  --background: oklch(0.145 0 0);
+/* 
+  ---break--- 
+*/
+
+ .dark {
+    --minha-cor:red;
+  --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
+  --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
+  --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  --primary: oklch(0.92 0.004 286.32);
+  --primary-foreground: oklch(0.21 0.006 285.885);
+  --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
+  --muted: oklch(0.274 0.006 286.033);
+  --muted-foreground: oklch(0.705 0.015 286.067);
+  --accent: oklch(0.274 0.006 286.033);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --ring: oklch(0.552 0.016 285.938);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent: oklch(0.274 0.006 286.033);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+  --sidebar-ring: oklch(0.552 0.016 285.938);
+} 
+
+/* 
+  ---break--- 
+*/
+
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-primary text-minha-custom ;
   }
-}
+} 
+
+

@@ -61,7 +61,7 @@
 
 - Routing: use **React Router** (`react-router-dom`) for navigation.
 - Folder structure:
-  - `src/assets` for images.
+  - `public/assets` for images.
   - `src/configs` for configuration of external libraries, such as Axios.
   - `src/layouts` only for the navbar, footer, and other elements that will be repeated across all pages.
   - `src/pages` for all pages.
