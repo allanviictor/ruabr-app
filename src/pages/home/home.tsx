@@ -1,8 +1,9 @@
 import banner1 from "#/img-1.png";
 import banner2 from "#/img-2.png";
 import banner3 from "#/img-3.png";
-import { HeroCarousel } from "@/components/hero-carrousel/hero-carrousel";
 import AboutSection from "@/shared/components/about-section/about-section";
+import { HeroCarousel } from "@/shared/components/hero-carrousel/hero-carrousel";
+import CredibilityMetrics from "@/shared/components/metrics/metrics";
 import { Layout } from "../../layouts/layout";
 import "./home.css";
 
@@ -40,6 +41,7 @@ export function Home() {
     <Layout PageTitle="Home">
       <HeroCarousel slides={heroSlides} autoplay={true} autoplayDelay={6000} />
       <AboutSection />
+      <CredibilityMetrics />
     </Layout>
   );
 }

@@ -246,19 +246,6 @@ Layout empilhado:
 
 ## Estilo de Fundo (Destaque Visual)
 
-### Cor de fundo com contraste
-
-- Verde escuro, azul profundo, roxo ou cinza escuro
-
-**Exemplos:**
-- #064E3B
-- #1E3A8A
-- #111827
-
-### Texto
-
-- Branco ou cinza claro
-
 ### Acessibilidade
 
 - Contraste AA

@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "../ui/button/button";
+import { Button } from "../../../components/ui/button/button";
 
 interface HeroSlide {
   id: string;
