@@ -11,7 +11,7 @@ export function Layout({ children, PageTitle }: LayoutProps) {
   return (
     <React.Fragment>
       <head>
-        <title>{PageTitle ? `Ruabr | ${PageTitle}` : "Ruabr"}</title>
+        <title>{PageTitle ? `Ruabr - ${PageTitle}` : "Ruabr"}</title>
       </head>
       <Header />
       <div>{children}</div>
