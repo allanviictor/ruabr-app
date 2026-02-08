@@ -1,8 +1,8 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import AboutSection from "@/shared/components/about-section/about-section";
 import { HeroCarousel } from "@/shared/components/hero-carrousel/hero-carrousel";
 import CredibilityMetrics from "@/shared/components/metrics/metrics";
 import { heroSlides, programas } from "@/shared/dados-estaticos";
+import { Card, CardContent, CardHeader } from "@/ui/card";
 import { Layout } from "../../layouts/layout";
 import "./home.css";
 
