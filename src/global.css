@@ -218,6 +218,24 @@
   --radius-3xl: calc(var(--radius) + 12px);
 }
 
+.font-inter {
+  font-family: "Inter", system-ui, sans-serif;
+}
+.font-volkhov {
+  font-family: "Volkhov", Georgia, serif;
+}
+
+body,
+html {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
