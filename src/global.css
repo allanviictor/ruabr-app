@@ -9,7 +9,7 @@
   /* ============================= */
 
   /* Neutros (Zinc) APENAS DE CONSULTA */
-  /*  --base-50: #fafafa;
+   --base-50: #fafafa;
   --base-100: oklch(0.967 0.001 286.375);
   --base-200: oklch(0.92 0.004 286.32);
   --base-300: oklch(0.871 0.009 286.279);
@@ -19,7 +19,7 @@
   --base-700: oklch(0.371 0.01 285.805);
   --base-800: oklch(0.274 0.006 286.033);
   --base-900: oklch(0.21 0.006 285.885);
-  --base-950: oklch(0.141 0.005 285.823); */
+  --base-950: oklch(0.141 0.005 285.823);
 
   /* Primary (Laranja Vivo) */
   --primary-50: oklch(0.97 0.04 45);

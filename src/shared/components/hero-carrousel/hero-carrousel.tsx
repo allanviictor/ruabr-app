@@ -130,7 +130,9 @@ export function HeroCarousel({
                         size="sm"
                         variant="primary"
                         className="inline-block md:hidden cursor-pointer"
-                      ></Button>
+                      >
+                        {slide.ctaText}
+                      </Button>
                     </div>
                   </div>
 

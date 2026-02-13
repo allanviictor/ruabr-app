@@ -1,6 +1,8 @@
 import AboutSection from "@/shared/components/about-section/about-section";
+import { SocialImpactSection } from "@/shared/components/campaign/campaign";
 import { HeroCarousel } from "@/shared/components/hero-carrousel/hero-carrousel";
 import CredibilityMetrics from "@/shared/components/metrics/metrics";
+import { TeamSection } from "@/shared/components/team/team";
 import { heroSlides, programas } from "@/shared/dados-estaticos";
 import { Card, CardContent, CardHeader } from "@/ui/card";
 import { Layout } from "../../layouts/layout";
@@ -58,6 +60,9 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      <SocialImpactSection />
+      <TeamSection />
     </Layout>
   );
 }

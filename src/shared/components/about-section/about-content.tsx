@@ -104,7 +104,7 @@ const AboutContent = ({ className = "" }) => {
 
       {/* CTA */}
       <Button
-        className="cursor-pointer hover:no-underline hover:bg-neutral-100 transition-colors"
+        className="cursor-pointer w-full md:w-auto hover:no-underline text-foreground hover:bg-neutral-100 transition-colors"
         variant={"outline"}
         iconRight={<ArrowRight size={20} />}
       >
