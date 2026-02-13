@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
 
+import { cn } from "@/lib/utils";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
-} from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
+} from "@/ui/carousel";
 
+import { Button } from "@/ui/button/button";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "../../../components/ui/button/button";
 
 interface HeroSlide {
   id: string;

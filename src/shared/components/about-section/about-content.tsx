@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button/button";
+import { Button } from "@/ui/button/button";
 import { ArrowRight, BookOpen, Users, Wrench } from "lucide-react";
 
 /**
