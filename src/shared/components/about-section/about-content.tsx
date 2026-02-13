@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button/button";
+import { Button } from "@/ui/button/button";
 import { ArrowRight, BookOpen, Users, Wrench } from "lucide-react";
 
 /**
@@ -104,7 +104,7 @@ const AboutContent = ({ className = "" }) => {
 
       {/* CTA */}
       <Button
-        className="cursor-pointer hover:no-underline hover:bg-neutral-100 transition-colors"
+        className="cursor-pointer w-full md:w-auto hover:no-underline text-foreground hover:bg-neutral-100 transition-colors"
         variant={"outline"}
         iconRight={<ArrowRight size={20} />}
       >
